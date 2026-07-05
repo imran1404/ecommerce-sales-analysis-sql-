@@ -11,3 +11,9 @@ create table customers (
              county varchar(50),
              created_at timestamp default current_timestamp
 );
+ create table Categories (
+    category_id INT AUTO_INCREMENT primary key,
+    category_name VARCHAR(100) not null unique,
+    description VARCHAR(255),
+    created_at TIMESTAMP default current_timestamp
+);
