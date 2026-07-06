@@ -1,5 +1,6 @@
 Use e_commerceDB;
 
+
 create table customers (
              customers_id int auto_increment primary key,
              first_name varchar(100) not null,
@@ -13,12 +14,15 @@ create table customers (
              county varchar(50),
              created_at timestamp default current_timestamp
 );
+
+
  create table Categories (
     category_id INT AUTO_INCREMENT primary key,
     category_name VARCHAR(100) not null unique,
     description VARCHAR(255),
     created_at TIMESTAMP default current_timestamp
 );
+
 
 create table products(
 			 product_id int auto_increment primary key,
@@ -33,5 +37,18 @@ create table products(
               constraint fk_product_category
         foreign key (category_id)
         references Categories(category_id)
+);
+
+
+create table orders (
+    order_id int auto_increment primary key,
+    customer_id int not null,
+    order_date date not null,
+    order_status enum('Pending', 'Shipped', 'Delivered', 'Cancelled') not null,
+    total_amount DECIMAL(10,2),
+
+    constraint fk_order_customer
+        foreign key (customer_id)
+        references customers(customers_id)
 );
 
