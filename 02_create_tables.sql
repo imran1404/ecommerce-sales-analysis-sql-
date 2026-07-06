@@ -68,3 +68,17 @@ create table Order_Items (
         foreign key (product_id)
         references Products(product_id)
 );
+
+
+create table Payments (
+    payment_id int auto_increment primary key,
+    order_id int not null,
+    payment_method enum('Credit Card','Debit Card','UPI','Net Banking','Cash on Delivery' ) not null,
+	payment_status enum('Pending','Completed','Failed','Refunded') not null,
+	payment_date datetime default current_timestamp,
+    amount decimal(10,2) not null,
+
+    constraint fk_payment_order
+        foreign key (order_id)
+        references Orders(order_id)
+);
