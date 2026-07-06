@@ -1,3 +1,5 @@
+Use e_commerceDB;
+
 create table customers (
              customers_id int auto_increment primary key,
              first_name varchar(100) not null,
