@@ -82,3 +82,16 @@ create table Payments (
         foreign key (order_id)
         references Orders(order_id)
 );
+
+
+Customers
+│
+└──── Orders
+      │
+      ├──── Payments
+      │
+      └──── Order_Items
+             │
+             └──── Products
+                    │
+                    └──── Categories
