@@ -17,3 +17,19 @@ create table customers (
     description VARCHAR(255),
     created_at TIMESTAMP default current_timestamp
 );
+
+create table products(
+			 product_id int auto_increment primary key,
+             product_name varchar(100) not null,
+             category_id int not null,
+             brand varchar(100) not null,
+             price decimal (10,2) not null,
+             stock_quantity int not null default 0,
+             description text,
+             created_at timestamp default current_timestamp,
+             
+              constraint fk_product_category
+        foreign key (category_id)
+        references Categories(category_id)
+);
+
