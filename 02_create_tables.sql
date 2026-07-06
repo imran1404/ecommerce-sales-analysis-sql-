@@ -84,6 +84,7 @@ create table Payments (
 );
 
 
+DATABASE STRUCTURE,
 Customers
 │
 └──── Orders
