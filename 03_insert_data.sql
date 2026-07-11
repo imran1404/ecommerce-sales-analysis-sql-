@@ -71,3 +71,17 @@ VALUES
 ('Car Vacuum Cleaner', 10, 'AGARO', 1200.00, 10, 'Portable car vacuum cleaner'),
 ('Car Phone Holder', 10, 'Portronics', 399.00, 15, 'Dashboard phone holder'),
 ('Bike Helmet', 10, 'Studds', 1999.00, 5, 'ISI-certified helmet');
+
+
+insert into orders(customer_id, order_date, order_status, total_amount)
+values
+(1, '2026-07-10', 'Delivered', 60798.00),
+(2, '2026-07-10', 'Delivered', 89999.00),
+(3, '2026-07-11', 'Pending', 4999.00),
+(4, '2026-07-11', 'Shipped', 3499.00),
+(5, '2026-07-12', 'Delivered', 599.00),
+(6, '2026-07-12', 'Cancelled', 2999.00),
+(7, '2026-07-13', 'Pending', 2599.00),
+(8, '2026-07-13', 'Delivered', 74999.00),
+(9, '2026-07-14', 'Delivered', 8999.00),
+(10, '2026-07-14', 'Shipped', 799.00);
