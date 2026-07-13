@@ -85,3 +85,19 @@ values
 (8,'2026-07-06','Shipped',6298.00),
 (9,'2026-07-06','Delivered',11999.00),
 (10,'2026-07-07','Pending',2398.00);
+
+
+insert into payments(order_id, payment_method, payment_status, amount)
+values
+(1, 'UPI', 'Completed', 61298.00),
+(2, 'Credit Card', 'Completed', 91298.00),
+(3, 'UPI', 'Pending', 1799.00),
+(4, 'Debit Card', 'Completed', 6498.00),
+(5, 'Cash On Delivery', 'Completed', 4998.00),
+(6, 'UPI', 'Refunded', 3999.00),
+(7, 'Net Banking', 'Pending', 30399.00),
+(8, 'Credit Card', 'Completed', 6398.00),
+(9, 'UPI', 'Completed', 51298.00),
+(10, 'Debit Card', 'Completed', 2398.00);
+
+
