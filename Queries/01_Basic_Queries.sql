@@ -1,6 +1,6 @@
 /*
 Basic SQL Queries
-Project : e_Commercedb Sales Analysis
+Project : E_commercedb Sales Analysis
 Author  : Mohammed Imran M
 */
 
