@@ -1,9 +1,7 @@
 /*
-===========================================
 Basic SQL Queries
-Project : E-Commerce Sales Analysis
-Author  : Maddy
-===========================================
+Project : e_Commercedb Sales Analysis
+Author  : Mohammed Imran M
 */
 
 -- 1. Display all customers
