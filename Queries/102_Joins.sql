@@ -134,11 +134,38 @@ left join orders o
 on c.customer_id = o.customer_id
 order by c.first_name;
 
---
+--15. Orders Without Customers
+
+select o.order_id, c.first_name
+from orders o
+right join customers c
+on c.customer_id = o.customer_id
+where c.customer_id is null;
 
 
+-- Self Joins are written by different database called EMPLOYEES. 
+--16. Employee and Manager
 
+select e.employee_name AS Employee, m.employee_name AS Manager
+from Employees e
+left join Employees m
+on e.manager_id = m.employee_id;
 
+--17. Employees under John
+
+select e.employee_name as Employee, m.employee_name as Manager
+from employees e
+join employees m
+on e.manager_id = m.employee_id
+where m.employee_name = "john";
+
+--18. Count employees as per managers
+
+select m.employee_name as manager, count(e.employee_id) as team_size
+from employees e
+join employees m
+on e.manager_id = m.employee_id
+group by m.employee_name;
 
 
 
