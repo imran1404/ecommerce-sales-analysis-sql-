@@ -99,7 +99,7 @@ select first_name, city
 from customers
 where city = "Chennai";
 
-
+ 
 --15. Display all products belonging to Electronics
 
 select category_id, product_name
