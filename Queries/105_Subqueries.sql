@@ -74,15 +74,52 @@ from orders
 where total_amount =
 (select max(total_amount) from orders);
 
+--11. Second Highest Product Price
 
+select max(price) second_highest
+from products
+where price <
+(select max(price) from products);
 
+--12. Second Highest Order Value
 
+select max(total_amount) as sec_highest
+from orders
+where total_amount <
+(select max(total_amount) from orders);
 
+--13. Customers Who Purchased Electronics
 
+select first_name, last_name
+from customers 
+where customer_id in
+(select o.customer_id from orders o
+join order_items oi
+on o.order_id = oi.order_id
+join products p
+on p.product_id = oi.product_id
+where p.category_id =
+(select category_id from categories
+where category_name = 'Electronics')
+);
 
+--14. Products Above Brand Average
 
+select product_name, brand, price
+from products p1
+where price >
+(select avg(price) from products p2
+where p1.brand = p2.brand);
 
+--15. Customers With Highest Spending
 
+select first_name
+from customers
+where customer_id = 
+(select customer_id from orders
+group by customer_id
+order by sum(total_amount)
+limit 1);
 
 
 
