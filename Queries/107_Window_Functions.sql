@@ -4,7 +4,7 @@ Funtions of windows function:
 ROW_NUMBER()	    Unique numbering
 RANK()	          Ranking with gaps
 DENSE_RANK()	    Ranking without gaps
-NTILE()	          Divide rows into groups
+NTILE()	          Divide rows into groups 
 LAG()	            Previous row
 LEAD()	          Next row
 SUM() OVER()	    Running Total
