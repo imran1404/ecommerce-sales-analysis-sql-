@@ -39,7 +39,18 @@ on oi.product_id = p.product_id
 group by product_name
 order by units_sold;
 
+--4. Revenue by Category
 
+select c.category_id, c.category_name, sum(oi.quantity*oi.unit_price) total_revnue
+from categories c
+join products p
+on p.category_id = c.category_id
+join order_items oi
+on p.product_id = oi.product_id
+group by c.category_id
+order by total_revnue desc;
+
+--5.
 
 
 
