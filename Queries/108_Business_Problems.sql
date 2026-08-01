@@ -97,7 +97,7 @@ end as customer_type
 from orders
 group by customer_id;
 
---10.
+--10. Top Category Contribution
 
 select category_name,revenue,
 round(revenue/sum(revenue)
