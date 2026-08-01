@@ -34,7 +34,37 @@ The top-performing customers contribute a significant portion of the company's t
 These customers should be targeted with loyalty programs and exclusive offers.
 
 
+## Problem 2: Best Selling Products
 
+### Business Question
+
+Which products are purchased most frequently?
+
+### Why This Matters
+
+Knowing the best-selling products helps the business:
+
+- Maintain sufficient inventory
+- Avoid stock shortages
+- Improve demand forecasting
+- Increase sales through promotions
+
+### SQL Used
+
+**Best Selling Products Query**
+
+```sql
+select p.product_name, sum(oi.quantity) units_sold
+from products p
+join order_items oi
+on oi.product_id = p.product_id
+group by product_name
+order by units_sold;
+```
+
+### Business Insight
+
+The highest-selling products should receive priority in inventory planning and promotional campaigns.
 
 
 
