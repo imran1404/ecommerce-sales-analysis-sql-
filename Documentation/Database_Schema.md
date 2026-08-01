@@ -14,6 +14,8 @@ It includes:
 
 ## Customers Table
 
+Maintains customer profiles and personal details for the e-commerce platform
+
 |    Column   |         Data Type           |     Description     |
 |-------------|-----------------------------|---------------------|
 | customer_id |            INT              | Primary Key         |
@@ -27,6 +29,8 @@ It includes:
 
 
 ## Products Table
+
+Stores product details, pricing, inventory, and category information available for purchase
 
 | Column        |     Data Type    |     Description     |
 |---------------|----------------  |---------------------|
@@ -42,7 +46,7 @@ It includes:
 
 ## Categories Table
 
-Stores the product categories available in the e-commerce system.
+Stores the product categories available in the e-commerce system
 
 | Column | Data Type | Constraints | Description |
 |---------|-----------|-------------|-------------|
@@ -54,7 +58,7 @@ Stores the product categories available in the e-commerce system.
 
 ## Orders Table
 
-Stores all customer purchase orders placed in the e-commerce system.
+Stores all customer purchase orders placed in the e-commerce system
 
 | Column | Data Type | Constraints | Description |
 |---------|-----------|-------------|-------------|
@@ -65,9 +69,31 @@ Stores all customer purchase orders placed in the e-commerce system.
 | total_amount | DECIMAL(10,2) | NULL | Total amount of the order |
 
 
+## Order_Items Table
+
+Stores the individual products included in each customer order. Each record represents one product within an order, along with its quantity and purchase price
+
+| Column | Data Type | Constraints | Description |
+|---------|-----------|-------------|-------------|
+| order_item_id | INT | Primary Key, AUTO_INCREMENT | Unique identifier for each order item |
+| order_id | INT | NOT NULL, Foreign Key | Identifies the order this item belongs to |
+| product_id | INT | NOT NULL, Foreign Key | Identifies the purchased product |
+| quantity | INT | NOT NULL | Number of units purchased |
+| unit_price | DECIMAL(10,2) | NOT NULL | Price of one unit at the time of purchase |
 
 
+## Payments Table
 
+Stores payment information for customer orders, including the payment method, payment status, transaction date, and payment amount
+
+| Column | Data Type | Constraints | Description |
+|---------|-----------|-------------|-------------|
+| payment_id | INT | Primary Key, AUTO_INCREMENT | Unique identifier for each payment |
+| order_id | INT | NOT NULL, Foreign Key | Identifies the order associated with the payment |
+| payment_method | ENUM('Credit Card','Debit Card','UPI','Net Banking','Cash on Delivery') | NOT NULL | Method used to complete the payment |
+| payment_status | ENUM('Pending','Completed','Failed','Refunded') | NOT NULL | Current status of the payment |
+| payment_date | DATETIME | DEFAULT CURRENT_TIMESTAMP | Date and time the payment was recorded |
+| amount | DECIMAL(10,2) | NOT NULL | Amount paid for the order |
 
 
 
