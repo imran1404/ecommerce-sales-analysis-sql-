@@ -24,7 +24,17 @@ It includes:
 | state       |         VARCHAR(50)         | Customer State      |
 | country     |         VARCHAR(50)         | Customer Country    |
 
+## Products Table
 
+| Column        |     Data Type    |     Description     |
+|---------------|----------------  |---------------------|
+| product_id    |        INT       | Primary Key         |
+| product_name  |     VARCHAR(150) | Product Name        |
+| category_id   |        INT       | Foreign Key         |
+| brand         |     VARCHAR(100) | Product Brand       |
+| price         |     DECIMAL(10,2)| Selling Price       |
+| stock_quantity|        INT       | Available Stock     |
+| description   |        TEXT      | Product Description |
 
 
 
