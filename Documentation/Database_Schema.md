@@ -1,4 +1,4 @@
-# E-Commerce Database Schema
+# E-Commerce Database Schema 
 
 This document explains the structure of the E-Commerce Database used in this project.
 
