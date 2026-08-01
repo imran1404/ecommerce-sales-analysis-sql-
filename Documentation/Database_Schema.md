@@ -42,6 +42,8 @@ It includes:
 
 ## Categories Table
 
+Stores the product categories available in the e-commerce system.
+
 | Column | Data Type | Constraints | Description |
 |---------|-----------|-------------|-------------|
 | category_id | INT | Primary Key, AUTO_INCREMENT | Unique identifier for each category |
@@ -50,7 +52,17 @@ It includes:
 | created_at | TIMESTAMP | DEFAULT CURRENT_TIMESTAMP | Date and time when the category was created |
 
 
+## Orders Table
 
+Stores all customer purchase orders placed in the e-commerce system.
+
+| Column | Data Type | Constraints | Description |
+|---------|-----------|-------------|-------------|
+| order_id | INT | Primary Key, AUTO_INCREMENT | Unique identifier for each order |
+| customer_id | INT | NOT NULL, Foreign Key | Identifies the customer who placed the order |
+| order_date | DATE | NOT NULL | Date the order was placed |
+| order_status | ENUM('Pending','Shipped','Delivered','Cancelled') | NOT NULL | Current status of the order |
+| total_amount | DECIMAL(10,2) | NULL | Total amount of the order |
 
 
 
