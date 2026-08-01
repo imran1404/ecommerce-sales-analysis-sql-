@@ -14,7 +14,7 @@ Understanding the highest revenue customers helps the business:
 - Increase repeat purchases
 
 ### SQL Used
-
+```sql
 select c.customer_id, concat(c.first_name, ' ', c.last_name) customer_name, sum(p.amount) total_revenue
 from customers c
 join orders o
@@ -25,6 +25,7 @@ where p.payment_status = 'Completed'
 group by c.customer_id, customer_name
 order by total_revenue desc
 limit 5;
+```
 
 ### Business Insight
 
