@@ -24,6 +24,8 @@ It includes:
 | state       |         VARCHAR(50)         | Customer State      |
 | country     |         VARCHAR(50)         | Customer Country    |
 
+
+
 ## Products Table
 
 | Column        |     Data Type    |     Description     |
@@ -35,6 +37,78 @@ It includes:
 | price         |     DECIMAL(10,2)| Selling Price       |
 | stock_quantity|        INT       | Available Stock     |
 | description   |        TEXT      | Product Description |
+
+
+
+## Categories Table
+
+| Column | Data Type | Constraints | Description |
+|---------|-----------|-------------|-------------|
+| category_id | INT | Primary Key, AUTO_INCREMENT | Unique identifier for each category |
+| category_name | VARCHAR(100) | NOT NULL, UNIQUE | Name of the product category |
+| description | VARCHAR(255) | NULL | Brief description of the category |
+| created_at | TIMESTAMP | DEFAULT CURRENT_TIMESTAMP | Date and time when the category was created |
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
