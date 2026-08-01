@@ -86,21 +86,75 @@ on o.customer_id = c.customer_id
 group by customer_id, customer_name
 order by lifetime_value desc;
 
---9.
+--9. Customer Segmentation
 
+select customer_id, sum(total_amount) spending,
+case 
+when sum(total_amount)>=80000 then'Preminum'
+when sum(total_amount)>=30000 then'Gold'
+else 'Regular'
+end as customer_type
+from orders
+group by customer_id;
 
+--10.
 
+select category_name,revenue,
+round(revenue/sum(revenue)
+over()*100,2) as contribution
+from(
+select c.category_name, sum(oi.quantity*oi.unit_price) Revenue
+from categories c
+join products p
+on c.category_id=p.category_id
+join order_items oi
+on p.product_id=oi.product_id
+group by c.category_name
+) x;
 
+--11. Highest Revenue Order
 
+select * from orders
+order by total_amount desc
+limit 1;
 
+--12. Average Order Size per Customer
 
+select customer_id, round(avg(total_amount),2) avg_orders
+from orders
+group by customer_id;
 
+--13. Sales KPI Dashboard
 
+select 
+ count(*) orders, 
+ sum(total_amount) revenue, 
+ round(avg(total_amount),2) avg_amount,
+ max(total_amount) max_price,
+ min(total_amount) min_price
+from orders;
 
+--14. Repeat Customers
 
+select customer_id, count(order_id) orders
+from orders
+group by customer_id
+having count(order_id)>1;
 
+--15. Executive Performance Report
 
-
+select cat.category_name, count(distinct o.order_id) Orders, sum(oi.quantity) units_sold,
+sum(oi.quantity*oi.unit_price) revenue,
+round(avg(oi.unit_price),2) average_selling_price
+from categories cat
+join products p
+on cat.category_id=p.category_id
+join order_items oi
+on p.product_id = oi.product_id
+join orders o
+on oi.order_id=o.order_id
+group by cat.category_name
+order by revenue desc;
 
 
 
