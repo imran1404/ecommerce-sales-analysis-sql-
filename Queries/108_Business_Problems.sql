@@ -50,13 +50,43 @@ on p.product_id = oi.product_id
 group by c.category_id
 order by total_revnue desc;
 
---5.
+--5. Payment Method Usage
 
+select payment_method, count(*) total_transactions
+from payments
+group by payment_method
+order by total_transactions desc;
 
+--6. Cancelled Orders Analysis
 
+select order_status, count(*) total
+from orders
+where order_status = "cancelled"
+group by order_status;
 
+--7. Customer Purchase Summary
 
+select concat(c.first_name,' ',c.last_name) customer_name, pr.product_name, pr.brand, oi.quantity, o.order_status, p.payment_method
+from customers c
+join orders o
+on o.customer_id = c.customer_id
+join order_items oi
+on o.order_id = oi.order_id
+join payments p
+on o.order_id = p.order_id
+join products pr
+on oi.product_id = pr.product_id;
 
+--8. Customer Lifetime Value (CLV)
+
+select c.customer_id, concat(c.first_name,' ',c.last_name) customer_name, sum(total_amount) lifetime_value
+from orders o
+join customers c
+on o.customer_id = c.customer_id
+group by customer_id, customer_name
+order by lifetime_value desc;
+
+--9.
 
 
 
