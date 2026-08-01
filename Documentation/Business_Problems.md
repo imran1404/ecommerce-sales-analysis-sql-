@@ -68,18 +68,38 @@ The highest-selling products should receive priority in inventory planning and p
 
 
 
+## Problem 3: Monthly Sales Performance
 
+### Business Question
 
+How does revenue change each month?
 
+### Why This Matters
 
+Monthly sales analysis helps management:
 
+- Identify seasonal trends
+- Measure business growth
+- Plan future sales strategies
+- Forecast revenue
 
+### SQL Used
 
+**Monthly Sales Report Query**
 
+```sql
+select year(order_date) sales_Year, monthname(order_date) month, sum(total_amount) revenue
+from orders
+group by
+year(order_date),
+month(order_date),
+monthname(order_date)
+order by sales_Year, month(order_date);
+```
 
+### Business Insight
 
-
-
+Monthly revenue trends provide valuable information for budgeting and future business planning.
 
 
 
