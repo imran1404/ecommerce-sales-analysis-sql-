@@ -1,174 +1,169 @@
-# 🛒 E-Commerce Sales Analysis using SQL
--------------------------------------------------
+# E-Commerce Sales Analysis using MySQL & Power BI
 
 ## 📌 Project Overview
 
-This project simulates a real-world e-commerce database and demonstrates SQL skills from beginner to advanced level.
+This project focuses on analyzing e-commerce sales data using MySQL and Power BI. The objective is to transform raw transactional data into meaningful business insights related to sales performance, customer behavior, product performance, and payment trends.
 
-The project focuses on designing a relational database, solving business problems using SQL, and generating meaningful business insights that support data-driven decision making.
+The project covers the complete analytics workflow, including database creation, data analysis using SQL, data modeling, DAX measures, and interactive Power BI dashboard development.
 
+---
 
-## 🎯 Project Objectives
+## 🎯 Objective
 
-- Design a normalized relational database.
-- Write optimized SQL queries.
-- Solve real-world business problems.
-- Analyze sales and customer behavior.
-- Demonstrate analytical thinking through SQL.
+Analyze e-commerce sales, customer behavior, product performance, and payment trends using SQL and Power BI.
 
+---
 
 ## 🛠️ Tools & Technologies
 
 - MySQL
-- MySQL Workbench
-- Git & GitHub
 - Power BI
+- DAX
+- GitHub
 
-## 🗄️ Database Design
+---
 
-The database consists of six interconnected tables:
+## 🧠 SQL Skills Demonstrated
 
-- Customers
-- Categories
-- Products
-- Orders
-- Order_Items
-- Payments
-
-
-## 💻 SQL Concepts Covered
-
-- Basic SQL Queries
-- Filtering and Sorting
-- Aggregate Functions
+- SELECT
+- WHERE
 - GROUP BY
 - HAVING
-- INNER JOIN
-- LEFT JOIN
-- RIGHT JOIN
-- CROSS JOIN
-- SELF JOIN
+- ORDER BY
+- Aggregate Functions
+- JOINs
 - Subqueries
 - Common Table Expressions (CTEs)
 - Window Functions
-- CASE Statements
-- Views
-- Business Problem Solving
 
-## 📊 Business Problems Solved
+---
 
-- Executive Sales Dashboard
-- Top 5 Customers by Revenue
-- Best Selling Products
-- Revenue by Product Category
-- Payment Method Usage
-- Cancelled Orders Analysis
-- Customer Purchase Summary
-- Customer Lifetime Value (CLV)
-- Customer Segmentation
-- Sales KPI Dashboard
-- Executive Performance Report
+## 📊 Power BI Skills Demonstrated
 
+- Data Modeling
+- Power Query
+- DAX Measures
+- Slicers
+- KPI Cards
+- Interactive Visualizations
+- Dashboard Design
+- Data Analysis
+
+---
+
+## 💼 Business Questions
+
+This project answers the following business questions:
+
+1. What is the total revenue?
+2. Which products generate the most revenue?
+3. Which product categories perform best?
+4. Who are the top customers by revenue?
+5. What is the monthly revenue trend?
+6. Which payment methods are most popular?
+7. Which months have the highest number of orders?
+8. What percentage of total revenue does each category contribute?
+
+---
 
 ## 📁 Project Structure
 
 ```text
-E-Commerce-SQL-Project/
+E-Commerce-SQL-Analytics/
 │
-├── Database/
-│   ├── Schema.sql
-│   └── Sample_Data.sql
+├── SQL/
+│   ├── 01_Create_Database.sql
+│   ├── 02_Create_Tables.sql
+│   ├── 03_Insert_Data.sql
+│   ├── 04_Basic_Queries.sql
+│   ├── 05_Joins.sql
+│   ├── 06_Advanced_Queries.sql
+│   └── 07_Business_Analysis.sql
 │
-├── SQL Queries/
-│   ├── Basic Queries/
-│   ├── Intermediate Queries/
-│   └── Advanced Queries/
+├── PowerBI/
+│   └── E-Commerce_Dashboard.pbix
 │
 ├── Documentation/
 │   ├── Database_Schema.md
 │   ├── Data_Dictionary.md
-│   ├── Business_Problems.md
-│   └── Database_Diagram.md
+│   └── Business_Questions.md
 │
-├── README.md
-└── LICENSE
+├── Screenshots/
+│   ├── 01_executive_dashboard.png
+│   ├── 02_sql_database_tables.png
+│   ├── 03_sql_query_results.png
+│   └── 04_powerbi_relationships.png
+│
+└── README.md
 ```
+-------
+
+📸 Dashboard Preview
+Executive Sales Dashboard
+
+<img width="933" height="793" alt="01_executive_dashboard png" src="https://github.com/user-attachments/assets/12624796-4bf6-4fc3-8c7d-edd9b671f88d" />
 
 
-## 🔄 Database Workflow
+## 🗄️ SQL Database
 
-Customer
+The project uses a MySQL relational database containing the core e-commerce tables, including customers, products, categories, orders, order items, and payments.
 
-↓
+![SQL Database Tables](<img width="1924" height="1084" alt="02_sql_database_tables png" src="https://github.com/user-attachments/assets/0a0097e2-0608-4624-8ac6-b95a91a08389" />
+)
 
-Places an Order
 
-↓
+## 🔎 SQL Business Analysis
 
-Order contains Products
+SQL queries were used to perform business analysis such as revenue analysis, category performance, and customer and product-level analysis.
 
-↓
-
-Payment is Processed
-
-↓
-
-Sales are Recorded
-
-↓
-
-Business Insights are Generated
+![SQL Query Results](<img width="1924" height="1084" alt="03_sql_query_results png" src="https://github.com/user-attachments/assets/038ad37a-6f6a-485d-b040-419d8a0ccc56" />
+)
 
 
 
-## 📈 Key Business Insights
+## 🔗 Power BI Data Model
 
-This project answers business questions such as:
+The Power BI data model connects customers, orders, order items, products, categories, and payments to support accurate filtering and analysis.
 
-- Which customers generate the highest revenue?
-- Which products sell the most?
-- Which categories perform best?
-- Which payment methods are most popular?
-- What is the monthly revenue trend?
-- Which products need inventory replenishment?
+![Power BI Relationships](<img width="1162" height="778" alt="04_powerbi_relationships png" src="https://github.com/user-attachments/assets/d1116890-d53a-4b99-a0d7-0c07202ed08c" />
+)
 
 
-## 🚀 Future Enhancements
+------
 
-- Interactive Power BI Dashboard
-- KPI Dashboard
-- Sales Forecasting
-- Customer Segmentation
-- Stored Procedures
-- Triggers
-- Index Optimization
+📈 Key Insights
+Revenue performance across different periods
+Top-performing products
+Category-level revenue contribution
+Top customers by revenue
+Monthly order trends
+Payment method distribution
+
+-----
+
+🚀 Project Outcome
+
+This project demonstrates an end-to-end data analytics workflow:
+
+MySQL Database → SQL Analysis → Data Modeling → DAX → Power BI Dashboard → Business Insights
+
+-------
+
+
+---
 
 ## 👨‍💻 Author
 
-**Mohammed imran**
+**Mohammed Imran**
+Aspiring Data Analyst
 
-Aspiring Data Analyst | SQL | Power BI | Python
+**E-Commerce Sales Analysis using MySQL & Power BI**
 
-Feel free to connect with me on LinkedIn and explore my other projects.
-www.linkedin.com/in/mohmmed-imran-data-analyst
+Built as a data analytics portfolio project to demonstrate practical skills in SQL, data analysis, data modeling, and Power BI dashboard development.
 
+                                                               Thank You!!!
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+---
 
 
 
