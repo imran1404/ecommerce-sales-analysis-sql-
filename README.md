@@ -108,16 +108,15 @@ Executive Sales Dashboard
 
 The project uses a MySQL relational database containing the core e-commerce tables, including customers, products, categories, orders, order items, and payments.
 
-![SQL Database Tables](<img width="1924" height="1084" alt="02_sql_database_tables png" src="https://github.com/user-attachments/assets/0a0097e2-0608-4624-8ac6-b95a91a08389" />
-)
+<img width="1924" height="1084" alt="02_sql_database_tables png" src="https://github.com/user-attachments/assets/0a0097e2-0608-4624-8ac6-b95a91a08389" />
 
 
 ## 🔎 SQL Business Analysis
 
 SQL queries were used to perform business analysis such as revenue analysis, category performance, and customer and product-level analysis.
 
-![SQL Query Results](<img width="1924" height="1084" alt="03_sql_query_results png" src="https://github.com/user-attachments/assets/038ad37a-6f6a-485d-b040-419d8a0ccc56" />
-)
+<img width="1924" height="1084" alt="03_sql_query_results png" src="https://github.com/user-attachments/assets/038ad37a-6f6a-485d-b040-419d8a0ccc56" />
+
 
 
 
@@ -125,8 +124,8 @@ SQL queries were used to perform business analysis such as revenue analysis, cat
 
 The Power BI data model connects customers, orders, order items, products, categories, and payments to support accurate filtering and analysis.
 
-![Power BI Relationships](<img width="1162" height="778" alt="04_powerbi_relationships png" src="https://github.com/user-attachments/assets/d1116890-d53a-4b99-a0d7-0c07202ed08c" />
-)
+<img width="1162" height="778" alt="04_powerbi_relationships png" src="https://github.com/user-attachments/assets/d1116890-d53a-4b99-a0d7-0c07202ed08c" />
+
 
 
 ------
